@@ -21,7 +21,7 @@ st.set_page_config(
 def connect_db():
     """Connects to the sqlite database."""
 
-    DB_FILENAME = Path(__file__).parent / "inventory.db"
+    DB_FILENAME = Path(__file__).parent / "inventory_new.db"
     db_already_exists = DB_FILENAME.exists()
 
     conn = sqlite3.connect(DB_FILENAME)
@@ -60,6 +60,7 @@ def initialize_data(conn):
             ('Energy Drink (250ml)', 2.50, 12, 18, 1.50, 8, 'High-caffeine energy drink'),
             ('Coffee (hot, large)', 2.75, 11, 14, 1.80, 5, 'Freshly brewed hot coffee'),
             ('Juice (200ml)', 2.25, 11, 9, 1.30, 5, 'Fruit juice blend'),
+            ('Milk (120ml)', 3.25, 11, 9, 1.30, 6, 'Milk'),
 
             -- Snacks
             ('Potato Chips (small)', 2.00, 34, 16, 1.00, 10, 'Salted and crispy potato chips'),
